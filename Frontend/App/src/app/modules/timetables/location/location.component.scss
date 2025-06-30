@@ -1,0 +1,56 @@
+.container-md {
+  background-color: #ffffff6c;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border-radius: 1%;
+  outline: .1rem solid #2b2b2b;
+}
+
+.col-3 {
+  margin-top: 2.5%;
+  line-height: 1.5;
+}
+
+.text-end {
+  margin-top: 10%;
+  color: black;
+  font-size: 115%;
+  font-weight: bold;
+  text-align: center; /* Alinea el texto al centro en dispositivos pequeños */
+}
+
+#boton {
+  margin-top: 4%;
+}
+
+#separ {
+  margin-right: 4%;
+}
+
+#Map {
+  border-radius: 4%;
+  outline: .1rem solid #2b2b2b70;
+}
+
+@media screen and (max-width: 768px) {
+  .container-md {
+    margin-top: 2%; /* Ajusta el margen superior en pantallas pequeñas */
+    margin-bottom: 2%; /* Ajusta el margen inferior en pantallas pequeñas */
+  }
+
+  .col-3 {
+    margin-top: 1.5%; /* Ajusta el margen superior en pantallas pequeñas */
+  }
+
+  .text-end {
+    margin-top: 5%;
+  }
+
+  #boton {
+    margin-top: 2%;
+  }
+
+  #separ {
+    margin-right: 2%;
+  }
+}

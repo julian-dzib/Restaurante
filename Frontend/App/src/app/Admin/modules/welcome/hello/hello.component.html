@@ -1,0 +1,64 @@
+<div class="container">
+	<div class="row">
+	  <div class="col-lg-5">
+		<!-- Contenedor de la derecha -->
+		<div class="frame">
+		  <div class="circle"></div>
+		  <div class="line left"></div>
+		  <div class="line right"></div>
+		  <div class="bracket left"></div>
+		  <div class="bracket right"></div>
+		  <div class="small top">
+			<span class="first-letter">S</span>ea Bienvenido
+		  </div>
+		  <div class="big">Administrador</div>
+		  <div class="small bottom">
+			lo <span class="first-letter">E</span>sperabamos
+		  </div>
+		  <div class="hide top"></div>
+		  <div class="hide bottom"></div>
+		</div>
+	  </div>
+  
+	  <div class="col-lg-7">
+		<div class="cont">
+		  <div class="container1">
+			<div class="row my-0">
+			  <div class="col-6">
+				<div class="card1">
+				  <div class="card-headers"></div>
+				  <div class="card-body">
+					<div style="text-align: right">
+					  <apx-chart
+						[series]="chartOptions.series"
+						[chart]="chartOptions.chart"
+						[xaxis]="chartOptions.xaxis"
+						[title]="chartOptions.title"
+					  ></apx-chart>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-6">
+				<div class="card2">
+				  <div class="card-headers"></div>
+				  <div class="card-body">
+					<div style="text-align: right">
+					  <apx-chart
+						[series]="chartOptions2.series"
+						[chart]="chartOptions2.chart"
+						[xaxis]="chartOptions2.xaxis"
+						[title]="chartOptions2.title"
+					  ></apx-chart>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+	</div>
+  </div>
+  

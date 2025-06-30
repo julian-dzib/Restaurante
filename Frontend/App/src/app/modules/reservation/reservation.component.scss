@@ -1,0 +1,36 @@
+.reservation-card {
+  background-color: rgba(255, 255, 255, 0.555);
+  border-radius: 8px;
+  margin: 35.8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.247);
+  height: 212px;
+  width: 400px;
+  margin-left: 450px;
+  transition: transform 0.0s ease; 
+  text-align: center;
+
+  .card-footer {
+    visibility: hidden;
+  }
+
+  &:hover {
+    border: 2px solid #0f12cf;
+    box-shadow: 0 8px 13px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); 
+    transition: all 0.2s ease; 
+
+    .card-footer {
+      visibility: visible;
+      text-align: right;
+    }
+  }
+}
+
+.card-header {
+  padding: 10px;
+}
+
+.card-body {
+  margin-top: 0px;
+}

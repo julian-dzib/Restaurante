@@ -1,0 +1,81 @@
+$primaryColor: #1b3039;
+$secondaryColor: #ff2258;
+$btnBackgroundColor: #eceff1;
+$btnHoverColor: #e2f1f8;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+}
+
+.header {
+  background-color: $primaryColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 3%;
+  
+  .logo {
+    cursor: pointer;
+    
+    img {
+      height: 105px;
+      width: auto;
+      transition: all 0.3s;
+      
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .nav-links {
+    list-style: none;
+    
+    li {
+      display: inline-block;
+      padding: 0 20px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      a {
+        font-size: 1.2rem;
+        color: #f2f2f2;
+        text-decoration: none;
+
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
+
+  .btn {
+    button {
+      font-weight: 600;
+      color: #1b3039;
+      padding: 9px 25px;
+      background: $btnBackgroundColor;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        background-color: $btnHoverColor;
+        color: $secondaryColor;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    // Agrega reglas para pantallas más pequeñas si es necesario
+  }
+}

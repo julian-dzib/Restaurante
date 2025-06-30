@@ -1,0 +1,13 @@
+<div class="reservation-summary">
+  <h2>Resumen de la reservación</h2>
+  <div class="reservation-summary">
+    <h2>Resumen de la reservación</h2>
+    <ul>
+      <li *ngFor="let item of list | keyvalue">
+        <strong>{{ item.key }}</strong>: {{ item.value }}</li>
+    </ul>
+  </div>
+
+    <button (click)="confirmDelete()" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+
+</div>

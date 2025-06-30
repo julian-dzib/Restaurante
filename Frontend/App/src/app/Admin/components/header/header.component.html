@@ -1,0 +1,22 @@
+<aside class="sidebar">
+    <div class="user-section">
+        <img src="../assets/Profile.png" alt="Imagen del Usuario">
+        <span class="user-name">{{user.name}}</span>
+        <span class="user-email">{{user.email}}</span>
+
+    </div>
+    <a class="btn" routerLink="/admon/CarouselList"><button><i class="fa-solid fa-panorama"></i> Carusel</button></a>
+
+    <a class="btn" (click)="toggleMenuSubmenu()">
+        <button><i class="fa-solid fa-mortar-pestle"></i> Menu</button></a>
+    <div class ="submenu" [ngClass]="{'show': isMenuSubmenuVisible}">
+    <a class="btn" routerLink="/admon/MenuList/product-list"><button (click)="hideSubmenu()">Productos</button></a>
+    <a class="btn" routerLink="/admon/MenuList/categorie-list"><button (click)="hideSubmenu()">Categorías</button></a>
+    </div>
+
+    <a class="btn" routerLink="/admon/TimeList"><button><i class="fa-solid fa-clock"></i> Horario</button></a>
+    <a class="btn" routerLink="/admon/ReservationList"><button><i class="fa-solid fa-calendar"></i> Reservaciones</button></a>
+    <a class="btn" routerLink="/admon/SuggestionList"><button><i class="fa-solid fa-lightbulb"></i> Sugerencias</button></a>
+
+    <span class="exit" routerLink="/admin"><i class="fa-solid fa-door-open"></i> Salir</span>
+</aside>

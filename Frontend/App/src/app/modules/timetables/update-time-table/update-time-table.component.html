@@ -1,0 +1,37 @@
+<div class="container-md">
+  <form (ngSubmit)="updateTime()">
+    <div class="form-group">
+      <label for="day">Día:</label>
+      <input type="text" class="form-control" id="day" [(ngModel)]="updatedTime.day" name="day" required>
+    </div>
+    <div class="form-group">
+      <label>Turno 1:</label>
+      <div class="row">
+        <div class="col">
+          <label for="start_time_one">Hora para Abrir:</label>
+          <input type="text" class="form-control" id="start_time_one" [(ngModel)]="updatedTime.start_time_one" name="start_time_one" required>
+        </div>
+        <div class="col">
+          <label for="end_time_one">Hora para Cerrar:</label>
+          <input type="text" class="form-control" id="end_time_one" [(ngModel)]="updatedTime.end_time_one" name="end_time_one" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Turno 2:</label>
+      <div class="row">
+        <div class="col">
+          <label for="start_time_two">Hora para Abrir:</label>
+          <input type="text" class="form-control" id="start_time_two" [(ngModel)]="updatedTime.start_time_two" name="start_time_two" required>
+        </div>
+        <div class="col">
+          <label for="end_time_two">Hora para Cerrar:</label>
+          <input type="text" class="form-control" id="end_time_two" [(ngModel)]="updatedTime.end_time_two" name="end_time_two" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Actualizar</button>
+    </div>
+  </form>
+</div>

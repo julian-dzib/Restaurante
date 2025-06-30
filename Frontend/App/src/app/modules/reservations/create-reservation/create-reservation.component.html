@@ -1,0 +1,43 @@
+<!-- MAIN -->
+<div class="main">
+  <div class="container">
+    <h2>Reserva tu mesa</h2>
+
+    <!-- Agrega el formulario de Angular -->
+    <form [formGroup]="reservationForm" (ngSubmit)="createNewReservation()">
+      <!-- Nombre -->
+      <label for="nombre">*Nombre</label><br>
+      <input type="text" formControlName="name" id="nombre" class="cajas"><br>
+
+      <!-- Teléfono -->
+      <label for="telefono">*Teléfono </label><span class="small-text">*Solo los 10 dígitos</span><br>
+      <input type="text" formControlName="phone" id="telefono" class="cajas"><br>
+
+      <!-- Fecha y hora de llegada -->
+      <label for="llegada">*Fecha y hora</label><br>
+      <input type="datetime-local" id="llegada" formControlName="arrival_datetime" class="cajas">
+      <br>
+
+      <!-- Número de mesa -->
+      <label for="estadia">*Número de mesa</label><br>
+      <select id="estadia" formControlName="table_number" class="cajas">
+        <option value="1" label="1"></option>
+        <option value="2" label="2"></option>
+        <option value="3" label="3"></option>
+        <option value="4" label="4"></option>
+        <option value="5" label="5"></option>
+        <option value="6" label="6"></option>
+      </select><br>
+
+      <!-- Botón de enviar -->
+      <input type="submit" value="Enviar" name="submit" class="btn">
+
+      <button (click)="verficarCookie()" class="btn1">Mi Reservación</button><br>
+
+      <br>
+      <span class="c small-text">* Los campos son obligatorios</span>
+    </form>
+  </div>
+</div>
+
+

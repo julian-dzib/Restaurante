@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-between flex-wrap flex-mdnowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="texto">Lista de Horario</h1>
+    <button [routerLink]="'/admon/TimeList/time-add'" class="btn btn-outline-secondary">
+      <i class="fa-solid fa-plus fa-2xl"></i>
+    </button>
+    <div class="table">
+    <table class="table-responsive" class="table table-hover table-striped">
+      <thead class="table-dark">
+        <tr class="header-row">
+          <th scope="col">Dia</th>
+          <th scope="col">Turno 1 - Hora para Abrir </th>
+          <th scope="col">Turno 1 - Hora para Cerrar</th>
+          <th scope="col">Turno 2 - Hora para Abrir </th>
+          <th scope="col">Turno 2 - Hora para Cerrar</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lists of list">
+
+          <th scope="row">{{ lists.day}}</th>
+          <td scope="row">{{ lists.start_time_one }}</td>
+          <th scope="row">{{ lists.end_time_one}}</th>
+          <td scope="row">{{ lists.start_time_two }}</td>
+          <th scope="row">{{ lists.end_time_two}}</th>
+
+          <td>
+          <button [routerLink]="'/admon/TimeList/update-time/' + lists.id_timetable" class="btn btn-outline-secondary">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+            <button (click)="confirmDelete(lists.id_timetable)" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<!-- MAIN -->
+<div class="main">
+  <div class="container">
+    <h2>Actualizar Reserva</h2>
+
+    <!-- Formulario de Angular -->
+    <form [formGroup]="updatedReservationForm" (ngSubmit)="updateReservation()">
+      <!-- ID (oculto) -->
+      <input type="hidden" formControlName="id">
+
+      <!-- Nombre -->
+      <label for="nombre">Nombre</label><br>
+      <input type="text" formControlName="name" id="nombre" class="cajas"><br>
+
+      <!-- Teléfono -->
+      <label for="telefono">Teléfono</label><br>
+      <input type="text" formControlName="phone" id="telefono" class="cajas"><br>
+
+      <!-- Fecha y hora de llegada -->
+      <label for="llegada">Fecha y hora</label><br>
+      <input type="datetime-local" id="llegada" formControlName="arrival_datetime" class="cajas">
+      <br>
+
+      <!-- Número de mesa -->
+      <label for="estadia">Número de mesa</label><br>
+      <select id="estadia" formControlName="table_number" class="cajas">
+        <option value="1" label="1"></option>
+        <option value="2" label="2"></option>
+        <option value="3" label="3"></option>
+        <option value="4" label="4"></option>
+        <option value="5" label="5"></option>
+        <option value="6" label="6"></option>
+      </select><br>
+
+      <!-- Botón de enviar -->
+      <button type="submit" class="btn">Actualizar</button>
+    </form>
+  </div>
+</div>

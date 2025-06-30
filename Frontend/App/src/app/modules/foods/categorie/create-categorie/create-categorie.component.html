@@ -1,0 +1,22 @@
+<div class="contact_form">
+  <div class="formulario">
+    <h1>Nueva Categoria </h1>
+    <form >
+      <div>
+        <label for="mensaje" class="colocar_mensaje">Mensaje
+          <span class="obligatorio">*</span>
+        </label>
+        <textarea [(ngModel)]="categorieText" name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
+          placeholder="Categoria..."></textarea>
+      </div>
+
+      <button  class="btn btn-primary" (click)="createCategorie()" name="enviar_formulario" id="enviar">
+          <p>Enviar</p>
+      </button>
+
+      <p class="aviso">
+        <span class="obligatorio"> * </span>los campos son obligatorios.
+      </p>
+    </form>
+  </div>
+</div>

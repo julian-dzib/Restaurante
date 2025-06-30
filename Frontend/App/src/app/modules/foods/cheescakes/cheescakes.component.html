@@ -1,0 +1,30 @@
+<!--<div *ngFor="let category of products">
+  <h3>{{ category.name_categories }}</h3>
+  <div *ngFor="let product of category.products">
+    <img [src]="getImageUrl(product.image)" alt="{{ product.name_product }}">
+    <h4>{{ product.name_product }}</h4>
+    <p>{{ product.description_product }}</p>
+    <div class="price">{{ product.precio | currency }}</div>
+  </div>
+</div>
+-->
+
+<body>
+  <div class="btn-group">
+    <button *ngFor="let category of products" (click)="scrollToSection(category.id_categories)">
+      {{ category.name_categories}}
+    </button>
+  </div>
+</body>
+<div>
+  <div class="container" *ngFor="let category of products" [attr.id]="'category-' + category.id_categories">
+    <h3 class="title">{{ category.name_categories }} </h3>
+    <div class="products-container">
+      <div class="product" *ngFor="let product of category.products" data-name="p-3">
+        <img [src]="getImageUrl(product.image)" alt="{{ product.name_product }}">
+        <h3>{{ product.name_product }}</h3>
+        <p>{{ product.description_product }}</p>
+        <div class="price">{{ product.precio | currency }}</div>
+      </div>
+    </div>
+  </div>

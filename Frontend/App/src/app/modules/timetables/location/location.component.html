@@ -1,0 +1,26 @@
+<div class="container-md">
+  <div class="row">
+    <div class="col-md-6">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.84402332415007!2d-90.05634141092334!3d20.320772140005353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f87e1873d8e6f7%3A0x6aaea94a43ed8efd!2sC.%2020%20102%2C%20Zona%20Centro%2C%2024920%20Dzitbalch%C3%A9%2C%20Camp.!5e0!3m2!1ses!2smx!4v1695159973699!5m2!1ses!2smx"
+        width="420" height="400" style="margin-top: 2%; margin-bottom: 2%;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" id="Map">
+      </iframe>
+    </div>
+    <div class="col-md-6">
+      <div class="ciclo" *ngFor="let item of list">
+        <div class="row">
+          <div class="col-3">
+            <p class="text-end">{{ item.day }} </p>
+          </div>
+          <div class="col" id="boton">
+            <p>
+              <button type="button" class="btn btn-success" id="separ">{{ item.start_time_one }} - {{ item.end_time_one }}</button>
+              <button type="button" class="btn btn-success" id="junt">{{ item.start_time_two }} - {{ item.end_time_two }}</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

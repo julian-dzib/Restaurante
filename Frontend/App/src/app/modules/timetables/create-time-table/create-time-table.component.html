@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <form (ngSubmit)="createNewTime()">
+    <div class="form-group">
+      <label for="day">Día:</label>
+      <input type="text" class="form-control" id="day" [(ngModel)]="newTime.day" name="day" required>
+    </div>
+    <div class="form-group">
+      <label>Turno 1:</label>
+      <div class="row">
+        <div class="col">
+          <label for="start_time_one">Hora de inicio:</label>
+          <input type="text" class="form-control" id="start_time_one" [(ngModel)]="newTime.start_time_one" name="start_time_one" required>
+        </div>
+        <div class="col">
+          <label for="end_time_one">Hora de Termino:</label>
+          <input type="text" class="form-control" id="end_time_one" [(ngModel)]="newTime.end_time_one" name="end_time_one" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Turno 2:</label>
+      <div class="row">
+        <div class="col">
+          <label for="start_time_two">Hora de inicio:</label>
+          <input type="text" class="form-control" id="start_time_two" [(ngModel)]="newTime.start_time_two" name="start_time_two" required>
+        </div>
+        <div class="col">
+          <label for="end_time_two">Hora de Termino:</label>
+          <input type="text" class="form-control" id="end_time_two" [(ngModel)]="newTime.end_time_two" name="end_time_two" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Crear Horario</button>
+    </div>
+  </form>
+</div>

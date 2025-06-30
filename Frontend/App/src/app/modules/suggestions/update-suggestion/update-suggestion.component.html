@@ -1,0 +1,14 @@
+<div class="update_form">
+  <div class="formulario">
+    <h1>Sugerencias </h1>
+    <h3>Actualizar</h3>
+      <form (submit)="updateComment()">
+        <input type="hidden" [(ngModel)]="updatedComment.id" name="id">
+        <label for="comment">Comentario:</label>
+        <textarea id="comment" [(ngModel)]="updatedComment.suggestion" name="comment"></textarea>
+        <button  class="btn btn-primary" type="submit">Actualizar</button>
+    </form>
+  </div>
+</div>
+
+

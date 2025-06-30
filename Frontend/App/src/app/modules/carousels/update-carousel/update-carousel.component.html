@@ -1,0 +1,18 @@
+<div>
+  <form (ngSubmit)="uploadImage()" #uploadForm="ngForm">
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input type="text" [(ngModel)]="description" name="description" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="image">Select Image:</label>
+      <input type="file" (change)="onFileSelected($event)" name="image" accept="image/*" />
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!selectedFile">
+      <span *ngIf="carouselId">Actualizar</span>
+    </button>
+  </form>
+</div>

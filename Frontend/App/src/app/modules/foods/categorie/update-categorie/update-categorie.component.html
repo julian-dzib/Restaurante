@@ -1,0 +1,15 @@
+<div class="update_form">
+  <div class="formulario">
+    <h1>Categoria </h1>
+    <h3>Actualizar</h3>
+      <form (submit)="updatedCategori()">
+        <input type="hidden" [(ngModel)]="updatedCategorie.id_categories" name="id_categories">
+        <label for="comment">Categoria:</label>
+        <textarea id="comment" [(ngModel)]="updatedCategorie.name_categories" name="name_categories"></textarea>
+        <button  class="btn btn-primary" type="submit">Actualizar</button>
+    </form>
+  </div>
+</div>
+
+
+

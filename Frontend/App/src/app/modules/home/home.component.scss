@@ -1,0 +1,19 @@
+.body {
+  //background: linear-gradient(to left, #757c88 30%, #c2c6ca 50%, #757c88 100%);
+  //background: linear-gradient(to left, #ffb671 30%, #e9cf67 50%, #ffb671 100%);
+  //background: linear-gradient(to left, #FFB74D 30%, #FF8A65 50%, #FFB74D 100%);
+  background: linear-gradient(to left, #ffb671 30%, #ffab91 50%, #ffb671 100%);
+
+
+  background-size: 200% 100%;
+  animation: moveGradient 20s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
